@@ -217,7 +217,7 @@ def mcmc(
     ncpp[0:nchains % ncpu] += 1
 
     # Launch Chains:
-    mp_context = mpr.get_context(ctx.Process)
+    mp_context = ctx
     pipes  = []
     chains = []
     for i in range(ncpu):
