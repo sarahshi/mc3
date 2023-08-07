@@ -71,7 +71,6 @@ jobs:
           CIBW_TEST_COMMAND: "pytest {project}/tests"
           CIBW_BUILD_VERBOSITY: 1
           CIBW_BUILD: "cp37-* cp38-* cp39-* cp310-*"
-          CIBW_ARCHS_WINDOWS: "amd64"
 
       - uses: actions/upload-artifact@v3
         with:
