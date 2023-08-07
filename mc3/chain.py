@@ -20,9 +20,8 @@ os_name = platform.system()
 # Choose the context based on the OS
 if os_name == "Windows":
     ctx = mp.get_context('spawn')  # or 'forkserver'
-else:
+elif os_name in ['Linux', 'Darwin', 'Java']:
     ctx = mp.get_context('fork')
-
 
 class Chain(ctx.Process):
   """
