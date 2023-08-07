@@ -3,6 +3,9 @@
 
 #include <Python.h>
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 #include <numpy/arrayobject.h>
 
 #include "ind.h"
