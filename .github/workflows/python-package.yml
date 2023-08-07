@@ -58,14 +58,14 @@ jobs:
     needs: test
     strategy:
       matrix:
-        os: [ubuntu-22.04, windows-2022, macos-11]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v3
       
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.14.1
-        env:
-          CIBW_BEFORE_BUILD: "apt-get update && apt-get install -y libpng-dev"
+        # env:
+        #   CIBW_BEFORE_BUILD: "apt-get update && apt-get install -y libpng-dev"
 
       - uses: actions/upload-artifact@v3
         with:
