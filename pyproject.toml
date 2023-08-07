@@ -5,4 +5,8 @@ requires = [
     'oldest-supported-numpy',
     ]
 
+[tool.cibuildwheel]
+before-all = "apt install libpng-dev"
+
 build-backend = "setuptools.build_meta"
+
