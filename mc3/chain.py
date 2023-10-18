@@ -19,7 +19,7 @@ os_name = platform.system()
 
 # Choose the context based on the OS
 if os_name == "Windows":
-    ctx = mp.get_context('forkserver')  # or 'forkserver'
+    ctx = mp.get_context('spawn')  # or 'forkserver'
 elif os_name in ['Linux', 'Darwin', 'Java']:
     ctx = mp.get_context('fork')
 
