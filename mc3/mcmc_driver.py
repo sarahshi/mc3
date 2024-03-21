@@ -15,7 +15,6 @@ import numpy as np
 from . import chain as ch
 from . import stats as ms
 
-
 # Determine the OS
 os_name = platform.system()  
 
